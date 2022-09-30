@@ -1,10 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
+        "title": "Another note",
+        "text": "this is a test",
+        "id": "f7b287e9-27e9-43d4-a4e2-8c99ffb9d2a0"
     },
     {
-        "title": "brian",
-        "text": "zoulko"
+        "title": "What the F",
+        "text": "This sucks\n",
+        "id": "72823426-f748-4f82-8785-0f485ef091cf"
     }
 ]
