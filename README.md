@@ -23,7 +23,7 @@ All data saved is kept in JSON format for easy retrieval. Everytime the applioca
 
 
 ### Special Notes:
-* I worked hard to separate the modules and maintain a structured design. Her's how I laid out the data directories for proper flow and functionality.
+* I worked hard to separate the modules and maintain a structured design. Here's how I laid out the data directories for proper flow and functionality.
     * db
         - contains notes.json file for storing notes.
     
@@ -32,14 +32,14 @@ All data saved is kept in JSON format for easy retrieval. Everytime the applioca
     
     * node_module - Not included in repo.
 
-    * notes    
-        - Javascript for note features.
+    * public (All Front End Modules) 
+        * Front End HTML
+        - assets
+            - css : Style Sheets
+            - js : Javascript.
 
-    * public
-        - assets - css - js : Front End HTML, StyleSheets and Javascript.
-
-    * routes
-        - Backend javascript
+    * routes (All Back End Modules)
+        * Backend javascript
 
 
 * Heroku URL to Deployed application:
