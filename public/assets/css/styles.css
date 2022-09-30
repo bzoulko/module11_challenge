@@ -16,6 +16,14 @@ body {
   cursor: pointer;
 }
 
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  text-decoration: underline;
+}
+
 .note-textarea,
 .note-title {
   color: #000000;

@@ -16,7 +16,6 @@ if (document.location.pathname === NOTES) {
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
-  console.log("Showing save button!");
 };
 
 // Hide an element
@@ -163,6 +162,7 @@ const renderNoteList = async (notes) => {
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
+    liEl.setAttribute("title", "Load Note");
 
     const spanEl = document.createElement('span');
     spanEl.classList.add('list-item-title');
@@ -180,6 +180,7 @@ const renderNoteList = async (notes) => {
         'text-danger',
         'delete-note'
       );
+      delBtnEl.setAttribute("title", "Delete Note");
       delBtnEl.addEventListener('click', handleNoteDelete);
 
       liEl.append(delBtnEl);
