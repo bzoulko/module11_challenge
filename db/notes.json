@@ -1,12 +1,17 @@
 [
     {
-        "title": "Another note",
-        "text": "this is a test",
-        "id": "f7b287e9-27e9-43d4-a4e2-8c99ffb9d2a0"
+        "title": "First Note",
+        "text": "This is my first note for the day.",
+        "id": "b60a3a6a-da7b-402b-8afb-08bf0d41f235"
     },
     {
-        "title": "What the F",
-        "text": "This sucks\n",
-        "id": "72823426-f748-4f82-8785-0f485ef091cf"
+        "title": "Second Note",
+        "text": "This is my second note for the day.",
+        "id": "a82f271a-1d9f-4674-90d2-69f8cea7ec06"
+    },
+    {
+        "title": "Third Note",
+        "text": "This is my third note for the day.",
+        "id": "a301e35b-ab91-4936-b42f-e72eda93bb7a"
     }
 ]

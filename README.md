@@ -1,5 +1,5 @@
 # Module 11 Challenge Project - Note Taker application using Express.js
-This program is a Full stack application, meaning it has a fully functional front end and a fully functional back end. This application is called "Note Taker", it can be used to write and save notes. When the application starts, you have a button in the middle of the page called "Get Started". Clicking this button will do just that, it'll get you started on another page for taking notes. You'll see that along the left hand side of the page is a list of all notes that have been saved. On the right hand side is where you will enter notes, starting with up top where it should read "Note Title". Here is where you enter the title of your note. On the next line you see "Note Text", you can tab to it after entering your title or simple click the cursor into the field. After entering the note, up top, on the right side you will see a save disk, click the disk and your note will be saved and added to the list on the left. Clicking the plus sign on top will clear the note taking area and place the cursor in the "Note Title" area for you to start entering another note.
+This program is a Full stack application, meaning it has a fully functional front end and a fully functional back end. This application is called "Note Taker", it can be used to write and save notes. When the application starts, threr's a button in the middle of the page called "Get Started". Clicking this button will do just that, it'll get you started on taking notes from another page. You'll see that along the left hand side of the page is a list of all notes that have been saved. On the right hand side is where you will enter notes, starting with up top where it should read "Note Title". Here is where you enter the title of your note. On the next line you see "Note Text", you can tab to it after entering your title or simply click the cursor into the field. After entering the note, up top, on the right side you will see a save disk, click the disk and your note will be saved and added to the list on the left. Clicking the plus sign on top will clear the note taking area of any entries and place the cursor in the "Note Title" area for you to start entering a new note.
 
 
 ## Application Featuers broken down.
@@ -34,6 +34,6 @@ All data saved is kept in JSON format for easy retrieval. Everytime the applioca
 
     * public
         - assets - css - js : Front End HTML, StyleSheets and Javascript.
-        
+
     * routes
         - Backend javascript

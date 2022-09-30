@@ -90,7 +90,7 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
-  //noteTitle.focus();
+  noteTitle.focus();
 };
 
 const handleNoteSave = () => {
