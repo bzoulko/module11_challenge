@@ -19,13 +19,12 @@ notes.get('/', (req, res) => {
 // POST Route for saving a NOTE.
 notes.post('/', (req, res) => {
   
-  const { isValid, errors } = req.body;
+  const { title, text } = req.body;
   const note = req.body;
 
-  if (!isValid) {
-    console.log(note);
+  if (title && text) {
     readAndAppend(note, './db/notes.json');
-    res.json(`Notes added`);
+    res.json(`Note added`);
   } else {
     res.json({
       message: 'Object is valid, not logging. Check front end implementation',
