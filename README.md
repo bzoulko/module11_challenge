@@ -7,7 +7,7 @@ This program is a Full stack application, meaning it has a fully functional fron
     - Button "Get Started" - Will launch the Note Taking page.
 
 * Entering Notes Page
-    - Title secion of the application is separated by a greenish color.
+    - Navigation secion of the application is in the upper half of the page, this section is denoted by greenish color.
         - "Note Taker" is a link, when clicked, it will take you back to the initial page.
         - "Plus Sign" is a clickable icon that will clear any notes and place focus on "Note Title"
         - "Save Disk" will save the notes you've filled in and add it to the list on the left.
