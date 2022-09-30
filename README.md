@@ -37,3 +37,26 @@ All data saved is kept in JSON format for easy retrieval. Everytime the applioca
 
     * routes
         - Backend javascript
+
+
+* Heroku URL to Deployed application:
+
+
+# Screen Shots
+![image](https://user-images.githubusercontent.com/108200823/193303953-bb8ab139-fef7-4b8c-973d-05248a3756cd.png)
+
+![image](https://user-images.githubusercontent.com/108200823/193304031-7fc50acb-e15f-4296-8b06-0019ce7de87e.png)
+
+![image](https://user-images.githubusercontent.com/108200823/193304125-7f687ae1-1168-4fd6-be84-778c4ed7c108.png)
+
+## Keyed Notes and Save button is now visible.
+![image](https://user-images.githubusercontent.com/108200823/193304236-ede5102f-f6fd-430f-b858-253fabf8293e.png)
+
+## Added Notes...
+![image](https://user-images.githubusercontent.com/108200823/193304314-3d91b7a9-3d4e-4703-94a5-7e7e2a33ec82.png)
+
+## Removing Notes...
+![image](https://user-images.githubusercontent.com/108200823/193304610-06090236-2c6b-481e-b8dd-ae5cf99397e7.png)
+![image](https://user-images.githubusercontent.com/108200823/193304871-02040457-04b4-4693-9d02-f5e4b8978b01.png)
+![image](https://user-images.githubusercontent.com/108200823/193304900-5763e367-f80b-41f0-851a-d8dcf9ea3f48.png)
+
