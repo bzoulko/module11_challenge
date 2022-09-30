@@ -3,8 +3,9 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+const NOTES = '/notes.html';
 
-if (window.location.pathname === '/notes') {
+if (document.location.pathname === NOTES) {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -15,6 +16,7 @@ if (window.location.pathname === '/notes') {
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
+  console.log("Showing save button!");
 };
 
 // Hide an element
@@ -25,29 +27,53 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-const getNotes = () =>
+// Get a note.
+const getNotes = () => 
   fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
+  })
+  .then((response) => response.json()) 
+  .then((data) => JSON.stringify(data))
+  .catch((error) => {
+    console.error('GET Error:', error);
   });
 
+
+// Save a note.
 const saveNote = (note) =>
-  fetch('/api/notes', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(note),
+fetch('/api/notes', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(note),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    alert(data);
+  })
+  .catch((error) => {
+    console.error('POST Error:', error);
   });
 
+
+// Delete a note.
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    alert(data);
+  })
+  .catch((error) => {
+    console.error('DELETE Error:', error);
   });
 
 const renderActiveNote = () => {
@@ -64,6 +90,7 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
   }
+  noteTitle.focus();
 };
 
 const handleNoteSave = () => {
@@ -104,12 +131,15 @@ const handleNoteView = (e) => {
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
+  e.preventDefault();
   activeNote = {};
   renderActiveNote();
 };
 
+// Fixed if condition, wrapped statement with parentheses then
+// determine if somthing is in the text fields.
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
+  if (!(noteTitle.value.trim() || noteText.value.trim())) {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);
@@ -118,8 +148,12 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  let jsonNotes = await notes.json();
-  if (window.location.pathname === '/notes') {
+
+  // This ia a problem line......
+  //let jsonNotes = await notes.json();
+  let jsonNotes = await JSON.parse(notes);
+
+  if (window.location.pathname === NOTES) {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
@@ -165,7 +199,7 @@ const renderNoteList = async (notes) => {
     noteListItems.push(li);
   });
 
-  if (window.location.pathname === '/notes') {
+  if (window.location.pathname === NOTES) {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 };
@@ -173,11 +207,11 @@ const renderNoteList = async (notes) => {
 // Gets notes from the db and renders them to the sidebar
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === NOTES) {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-}
+} 
 
 getAndRenderNotes();
