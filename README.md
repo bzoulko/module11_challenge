@@ -40,7 +40,7 @@ All data saved is kept in JSON format for easy retrieval. Everytime the applioca
 
 
 * Heroku URL to Deployed application:
-
+https://vast-shore-80072.herokuapp.com/
 
 # Screen Shots
 ![image](https://user-images.githubusercontent.com/108200823/193303953-bb8ab139-fef7-4b8c-973d-05248a3756cd.png)
