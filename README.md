@@ -2,7 +2,7 @@
 This program is a Full stack application, meaning it has a fully functional front end and a fully functional back end. This application is called "Note Taker", it can be used to write and save notes. When the application starts, threr's a button in the middle of the page called "Get Started". Clicking this button will do just that, it'll get you started on taking notes from another page. You'll see that along the left hand side of the page is a list of all notes that have been saved. On the right hand side is where you will enter notes, starting with up top where it should read "Note Title". Here is where you enter the title of your note. On the next line you see "Note Text", you can tab to it after entering your title or simply click the cursor into the field. After entering the note, up top, on the right side you will see a save disk, click the disk and your note will be saved and added to the list on the left. Clicking the plus sign on top will clear the note taking area of any entries and place the cursor in the "Note Title" area for you to start entering a new note.
 
 
-## Application Featuers broken down.
+## Application Features broken down.
 * Initial Page
     - Button "Get Started" - Will launch the Note Taking page.
 
@@ -14,9 +14,12 @@ This program is a Full stack application, meaning it has a fully functional fron
     
     - Main section of the page.
         - Column to the left is where your notes will be saved and kept in a list format.
+            * Each list item will have a DELETE (AKA: Trash Can) Icon you can click to remove the note.
+            * Clicking on the list item itself will load it into the text area for review.
         - Column to the right is where you enter your notes.
+        
 
-All data saved is kept in JSON format for easy retrieval. Everytime the appliocation re-opens, your saved notes will re-appear on the left hand side. Unfortunatly I ran short on time and wasn't able to get the DELETE feature working. 
+All data saved is kept in JSON format for easy retrieval. Everytime the appliocation re-opens, your saved notes will re-appear on the left hand side. 
 
 
 ### Special Notes:
